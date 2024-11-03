@@ -89,7 +89,7 @@ with conn.cursor() as curr:
                     """, (client_id,))
 
         arr = list(cursor.fetchall())[0][0]  # извлечение массива номеров
-        arr.remove(delete_number)  # добавление нового номера
+        arr.remove(delete_number)  # удаление нового номера
 
         new_numbers_list = [int(item) for item in arr]  # новое значение поля numbers
 
